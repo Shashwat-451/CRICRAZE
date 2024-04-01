@@ -1,7 +1,4 @@
-<DOCTYPE HTML>
-    <?php include 'sem4connection.php';
-    error_reporting(0);
-    ?> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        
+        <link rel="icon" href="./images/lg2.png">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
      
@@ -18,11 +15,12 @@
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
         <link rel="stylesheet" href="./font2/Hikou Diagonal.otf">
        
-        <link rel="stylesheet" href="index.css">
-    <title>Cricraze</title>
-      <style>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/style.css">
+    <title>Cricpedia</title>
+    <style>
       .card{
-        background-color: rgb(30,62,62);
+        background-color: rgb(62,62,62);
         color:white;
       }
     </style>
@@ -41,9 +39,9 @@
               <li  class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="./score.html">Live Score</a></li>
               <li class="nav-item"><a class="nav-link" href="./Schedule.html">Schedule</a></li>
-              <li class="nav-item"><a class="nav-link" href="./Team.html">Team</a></li>
+              <li class="nav-item"><a class="nav-link" href="./TEAM PAGE/team.html">Team</a></li>
               <li class="nav-item "><a class="nav-link" href="./ipl.html">IPL</a></li>
-         
+              
               <li class="nav-item"><a class="nav-link" href="./blogs.html">Blogs</a></li>
               <li class="nav-item"><a class="nav-link" href="./history.html">History</a></li>
            </ul>
@@ -205,7 +203,7 @@
                         <div class="card-body">
                           <h4 class="card-title">Blogs</h4>
                          
-                          <a href="./blogs.html" class="btn btn-primary">Explore</a>
+                          <a href="./index (2).html" class="btn btn-primary">Explore</a>
                         </div>
                       
                 </div>
@@ -217,7 +215,7 @@
                         <div class="card-body">
                           <h4 class="card-title">History</h4>
                           
-                          <a href="./history.html" class="btn btn-primary">Explore</a>
+                          <a href="./index (2).html" class="btn btn-primary">Explore</a>
                         </div>
                       
                 </div>
@@ -230,7 +228,7 @@
 
 
  
-    <footer style="margin-top:80px;background: linear-gradient(90deg, rgba(20,14,141,1) 1%, rgba(13,12,98,1) 12%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 100%);" class="text-center text-white">
+    <footer style="margin-top: 110px;background: linear-gradient(90deg, rgba(20,14,141,1) 1%, rgba(13,12,98,1) 12%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 100%);" class="text-center text-white">
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: Form -->
@@ -250,9 +248,8 @@
               <div class="col-md-5 col-12">
                 <!-- Email input -->
                 <div class="form-outline form-white mb-4">
-                <input type="email"  class="form-control" placeholder=Email name="email">
-             
-                  
+                  <input type="email" id="form5Example2" class="form-control" />
+                  <label class="form-label" for="form5Example2">Email address</label>
                 </div>
               </div>
               <!--Grid column-->
@@ -260,8 +257,7 @@
               <!--Grid column-->
               <div class="col-auto">
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-outline-light mb-4" onclick="conf()" name="register">
-            
+                <button type="submit" class="btn btn-outline-light mb-4">
                   Subscribe
                 </button>
               </div>
@@ -289,32 +285,6 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
-    <script>
-         function conf()
-            {   
-                alert("Congratulations! You have been registered successfully");
-            }
-        </script>
-
 </body>
 
 </html>
-
-<?php
-
-$em=$_GET['email'];
-
-
-$query="INSERT INTO usermail VALUES('$em')";
-$data=mysqli_query($conn,$query);
-
-if($data)
-{
-    //echo "Data inserted into Database";
-}
-else{
-    //echo "Failed to insert data into Database";
-}
-
-?>
