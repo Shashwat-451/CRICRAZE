@@ -58,8 +58,7 @@ nav > h1{
   background-color: rgb(6, 25, 31);
     display: flex;
     
-    align-items: center;
-    justify-content: center;
+    /* height: 100vh; */
     background-color: rgb(6, 25, 31);
 }
 .sidebar{
@@ -92,3 +91,10 @@ nav > h1{
 .ms, .dev{
     margin-top: 25px;
 }
+
+@media screen and (max-width: 600px) {
+    
+      .sidebar{
+        display: none;
+      }
+    }

@@ -96,3 +96,8 @@ nav.km li{
 img{
     margin-bottom: 2px;
 }
+
+@media screen and (max-width: 600px) {
+    .sidebar{
+      display: none;
+    }}
